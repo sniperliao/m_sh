@@ -381,6 +381,110 @@
 
       footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--ink-faint); }
       footer p { margin: 0 0 6px; }
+
+      /* ---------- Tabs ---------- */
+      .tab-bar {
+        position: sticky; top: 0; z-index: 30;
+        display: flex; gap: 8px;
+        margin: 18px -18px 0; padding: 10px 18px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+      .tab-btn {
+        flex: 1 1 0;
+        appearance: none; cursor: pointer;
+        font: inherit; font-weight: 900; font-size: 16px;
+        color: var(--ink-soft);
+        background: var(--surface);
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        min-height: 2.75rem;
+      }
+      .tab-btn[aria-selected="true"] { background: var(--pine-deep); border-color: var(--pine-deep); color: #eef5ef; }
+      @media (prefers-color-scheme: dark) { .tab-btn[aria-selected="true"] { color: #0d2018; background: var(--pine); border-color: var(--pine); } }
+      .tab-btn .tab-sub { display: block; font-size: 12px; font-weight: 500; opacity: .75; margin-top: 1px; }
+      [hidden] { display: none !important; }
+
+      /* ---------- Node reminder cards (tab 2) ---------- */
+      .now-bar {
+        margin-top: 22px;
+        background: var(--pine-deep); color: #eef5ef;
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between;
+      }
+      @media (prefers-color-scheme: dark) { .now-bar { background: #0d2c1f; } }
+      .now-bar .clock { font-variant-numeric: tabular-nums; font-weight: 900; font-size: 20px; }
+      .now-bar .clock small { font-size: 13px; font-weight: 500; color: #bcd4c2; margin-right: 8px; }
+      .now-bar .phase { font-size: 14.5px; color: #d7e7da; }
+      .now-bar .phase b { color: #fff; }
+      .jump-btn {
+        appearance: none; cursor: pointer; font: inherit; font-weight: 700; font-size: 14px;
+        background: rgba(255,255,255,.12); color: #eef5ef;
+        border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 8px 16px;
+      }
+      .day-head {
+        display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+        margin: 30px 0 4px;
+      }
+      .day-head h3 { font-family: "Noto Serif TC", serif; font-size: 21px; font-weight: 900; margin: 0; }
+      .day-head span { font-size: 13px; color: var(--ink-faint); font-weight: 500; }
+      .nodes { position: relative; margin-top: 10px; padding-left: 26px; }
+      .nodes::before {
+        content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px;
+        width: 3px; border-radius: 99px; background: var(--line);
+      }
+      .node {
+        position: relative;
+        background: var(--surface);
+        border: 1.5px solid var(--line);
+        border-radius: 14px;
+        padding: 14px 16px 14px 18px;
+        margin: 0 0 12px;
+        box-shadow: var(--shadow);
+      }
+      .node::before {
+        content: ""; position: absolute; left: -24px; top: 20px;
+        width: 13px; height: 13px; border-radius: 50%;
+        background: var(--surface); border: 3px solid var(--ink-faint);
+      }
+      .node-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+      .node-time { font-weight: 900; font-variant-numeric: tabular-nums; color: var(--pine); font-size: 14.5px; padding-top: 3px; }
+      .node-count {
+        flex: 0 0 auto;
+        font-variant-numeric: tabular-nums; font-weight: 900; font-size: 13.5px;
+        background: var(--sky-bg); color: var(--sky);
+        border-radius: 999px; padding: 4px 11px; white-space: nowrap;
+      }
+      .node-count.soon { background: var(--rust-bg); color: var(--rust); }
+      .node h4 { margin: 6px 0 4px; font-size: 18px; font-weight: 900; line-height: 1.4; }
+      .node p { margin: 0 0 6px; font-size: 14.5px; color: var(--ink-soft); }
+      .node p:last-of-type { margin-bottom: 0; }
+      .node .tip b { color: var(--amber); }
+      .node-now-badge {
+        display: none;
+        margin-top: 10px;
+        font-weight: 900; font-size: 14px; color: var(--pine-deep);
+        background: var(--amber-bg); border-radius: 8px; padding: 6px 12px;
+      }
+      @media (prefers-color-scheme: dark) { .node-now-badge { color: var(--amber); } }
+      .node-now-badge .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--rust); margin-right: 7px; animation: pulse 1.6s ease-in-out infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+      @media (prefers-reduced-motion: reduce) { .node-now-badge .dot { animation: none; } }
+      .node.is-now {
+        border: 3px solid var(--pine);
+        background: var(--amber-bg);
+        box-shadow: 0 14px 34px rgba(29, 42, 36, .18);
+      }
+      .node.is-now::before { border-color: var(--pine); background: var(--amber); width: 17px; height: 17px; left: -26px; top: 18px; }
+      .node.is-now .node-now-badge { display: inline-block; }
+      .node.is-now .node-count { background: var(--pine-deep); color: #eef5ef; }
+      @media (prefers-color-scheme: dark) { .node.is-now .node-count { background: var(--pine); color: #0d2018; } }
+      .node.is-past { opacity: .58; }
+      .node.is-past::before { border-color: var(--line); background: var(--surface-2); }
+      .node.is-past .node-count { background: var(--surface-2); color: var(--ink-faint); }
+      .nodes-note { font-size: 13px; color: var(--ink-faint); margin-top: 6px; }
     </style>
   </head>
   <body>
@@ -431,6 +535,13 @@
         </div>
       </div>
 
+      <!-- Tabs -->
+      <nav class="tab-bar" role="tablist" aria-label="頁面分頁">
+        <button class="tab-btn" type="button" role="tab" id="tab-overview" aria-selected="true" aria-controls="panel-overview" data-tab="overview">行程總覽<span class="tab-sub">天氣・飯店・完整行程・路徑評估</span></button>
+        <button class="tab-btn" type="button" role="tab" id="tab-nodes" aria-selected="false" aria-controls="panel-nodes" data-tab="nodes" tabindex="-1">節點提示卡<span class="tab-sub">照時間排・現在位置醒目標示・即時倒數</span></button>
+      </nav>
+
+      <div id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
       <!-- Hotel status settled -->
       <div class="confirm" role="note" aria-label="訂房狀態已結清">
         <h2>訂房已結清：萬豪電話確認完成・英迪格已取消</h2>
@@ -821,6 +932,158 @@
         </div>
       </section>
 
+      </div><!-- /panel-overview -->
+
+      <!-- Node reminder cards -->
+      <div id="panel-nodes" role="tabpanel" aria-labelledby="tab-nodes" hidden>
+        <div class="now-bar" role="status" aria-label="目前進度">
+          <div>
+            <div class="clock"><small>現在時間（台北）</small><span id="now-clock">—</span></div>
+            <div class="phase" id="now-phase">載入中…</div>
+          </div>
+          <button class="jump-btn" type="button" id="jump-now">跳到現在這張卡 ↓</button>
+        </div>
+        <p class="sec-lede" style="margin-top:16px">全部重要節點照時間由上往下排。<b>現在時間落在哪個時段，那張卡會變成醒目的亮色卡並標「現在在這裡」</b>；還沒到的卡片，右上角即時倒數離它開始還有多久（每秒更新）；已經過的卡片會自動變淡並標「已結束」。出發前打開這一頁放著，照卡往下走就好。</p>
+
+        <div class="day-head"><h3>Day 1・11/20（五）</h3><span>關西早餐寫報告 → 動物園 → 萬豪 → 上逸會 → 聖誕夜遊</span></div>
+        <div class="nodes">
+          <article class="node" data-start="2026-11-20T05:45:00+08:00" data-end="2026-11-20T07:00:00+08:00">
+            <div class="node-top"><span class="node-time">05:45–07:00</span><span class="node-count">—</span></div>
+            <h4>台中北屯出發 → 關西休息站</h4>
+            <p>國1 大雅交流道上 → 新竹系統轉國3，約 108 km、估 70 分，07:00 抵達關西。</p>
+            <p class="tip"><b>提醒：</b>出發前先看一眼 1968 即時路況；05:45 準時走，才守得住後面每一站。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T07:00:00+08:00" data-end="2026-11-20T08:00:00+08:00">
+            <div class="node-top"><span class="node-time">07:00–08:00</span><span class="node-count">—</span></div>
+            <h4>關西休息站：早餐＋寫報告（停滿 1 小時）</h4>
+            <p>早餐吃麥當勞（06:30 已開門）；寫報告坐 1F 靠窗充電座位區（110V 插座＋免費 WiFi，自備充電器）。</p>
+            <p class="tip"><b>提醒：</b>休息站<b>沒有星巴克</b>；招牌關西便當平日 11:00 才開賣，買不到、不要等它。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T08:00:00+08:00" data-end="2026-11-20T09:00:00+08:00">
+            <div class="node-top"><span class="node-time">08:00 準時出發</span><span class="node-count">—</span></div>
+            <h4>離開關西 → 木柵動物園（死線）</h4>
+            <p>國3 北上、木柵交流道下（動物園官方建議路線），週五晨峰估 55–85 分，預計 08:55–09:25 抵達。</p>
+            <p class="tip"><b>提醒：</b>08:00 是死線——晚出發就直接吃掉動物園開園初的低人潮時段。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T09:00:00+08:00" data-end="2026-11-20T14:30:00+08:00">
+            <div class="node-top"><span class="node-time">09:00–14:30</span><span class="node-count">—</span></div>
+            <h4>臺北市立動物園</h4>
+            <p>停河川高灘地停車場（平日 NT$50／次、1,228 格）。入園先直衝大貓熊館——週五平日自由入館、免抽券免預約，再慢慢往上逛。門票 NT$100。</p>
+            <p class="tip"><b>提醒：</b>若飄陣雨，先轉大貓熊館、企鵝館、兩棲爬蟲館等室內館躲 30–60 分鐘。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T14:30:00+08:00" data-end="2026-11-20T15:00:00+08:00">
+            <div class="node-top"><span class="node-time">14:30–15:00</span><span class="node-count">—</span></div>
+            <h4>離園，開車回大直</h4>
+            <p>動物園 → 台北萬豪，估 25–35 分，銜接 15:00–16:00 的 check-in 窗口，不用趕。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T15:00:00+08:00" data-end="2026-11-20T16:00:00+08:00">
+            <div class="node-top"><span class="node-time">15:00–16:00</span><span class="node-count">—</span></div>
+            <h4>台北萬豪 check-in：先停車卡位</h4>
+            <p>抵達先把車停進 B2–B4（免費停車 15:00 起算，早到每小時 NT$100）。約 15:40 進房安頓、放行李；車今晚不再移動。</p>
+            <p class="tip"><b>提醒：</b>先卡位、再輕裝——萬一滿位，備案順序：劍南路站轉乘停車場 → NOKE → 春大直（詳見總覽分頁）。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T16:00:00+08:00" data-end="2026-11-20T17:15:00+08:00">
+            <div class="node-top"><span class="node-time">16:00 出發・16:45 搭乘</span><span class="node-count">—</span></div>
+            <h4>步行去美麗華・摩天輪日落場</h4>
+            <p>16:00 從萬豪步行約 5 分到美麗華；摩天輪一圈約 17 分、平日票 NT$150，16:45 左右上車，車廂裡正好接 17:04 日落，約 17:15 下車。</p>
+            <p class="tip"><b>提醒：</b>透明車廂全場僅 2 個，搭一般車廂即可、不用等；排隊人多就 16:05 先搭一圈，日落改在地面看，晚餐時間不受影響。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T17:15:00+08:00" data-end="2026-11-20T18:45:00+08:00">
+            <div class="node-top"><span class="node-time">17:15–18:45</span><span class="node-count">—</span></div>
+            <h4>美麗華／NOKE 逛街</h4>
+            <p>搭完摩天輪就在大直生活圈慢慢逛：美麗華館內，或過馬路到 NOKE 忠泰樂生活（11:00–22:00），不用再移動車輛。逛到 18:40 收尾。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T18:45:00+08:00" data-end="2026-11-20T21:00:00+08:00">
+            <div class="node-top"><span class="node-time">18:45 出發・19:00 入席</span><span class="node-count">—</span></div>
+            <h4>上逸會晚餐（NOKE 7F・預訂已確認）</h4>
+            <p>18:45 步行往 NOKE（約 5–8 分）、18:55 抵達，19:00 入席；預估約 21:00 結束。</p>
+            <p class="tip"><b>提醒：</b>預訂已確認、直接入席；晚餐不要拖過 21:00，下一張卡的耶誕城主燈秀時間貼齊。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T21:00:00+08:00" data-end="2026-11-20T23:00:00+08:00">
+            <div class="node-top"><span class="node-time">21:10 出發・23:00 熄燈</span><span class="node-count">—</span></div>
+            <h4>聖誕夜遊二選一</h4>
+            <p><b>主線（體力夠）：</b>21:10 劍南路站出發 → 約 21:55 抵板橋站 → 步行約 5 分到市民廣場，趕 22:00 最後一場有聲主燈秀（趕不上還有 22:30 後無聲版），亮燈至 23:00。</p>
+            <p><b>輕量線（想休息）：</b>文湖線 2 站到大湖公園夜間散步，早點回萬豪——今天 05:45 就出發了。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-20T23:00:00+08:00" data-end="2026-11-21T00:10:00+08:00">
+            <div class="node-top"><span class="node-time">約 23:45–00:10 回到</span><span class="node-count">—</span></div>
+            <h4>回台北萬豪休息</h4>
+            <p>耶誕城回程約 23:45–00:10 抵達（輕量線更早）。回房休息，Day 2 09:30 再出發——睡飽最重要。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+        </div>
+
+        <div class="day-head"><h3>Day 2・11/21（六）</h3><span>年輕人路線：松菸 → 華山 → 赤峰街 → 大稻埕日落 → 饒河</span></div>
+        <div class="nodes">
+          <article class="node" data-start="2026-11-21T09:30:00+08:00" data-end="2026-11-21T10:00:00+08:00">
+            <div class="node-top"><span class="node-time">09:30–10:00</span><span class="node-count">—</span></div>
+            <h4>萬豪早餐，10:00 前退房</h4>
+            <p>方案含早餐。今天降雨 0%、14–21°C，是本週最適合整天在外面走的一天。</p>
+            <p class="tip"><b>提醒：</b>退房後第一件事就是去松山把車安置好，之後整天不用再想停車。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T10:00:00+08:00" data-end="2026-11-21T10:45:00+08:00">
+            <div class="node-top"><span class="node-time">10:00–10:45</span><span class="node-count">—</span></div>
+            <h4>開車往松山・先把車停好</h4>
+            <p>萬豪 → 松山車站地下停車場估約 20 分，10:30 停妥（429 格、24 小時、週六 NT$50／時、當日上限 NT$300，場內直通捷運松山站）；之後步行約 10 分到松菸。</p>
+            <p class="tip"><b>提醒：</b>導航認「松山路 11 號」這座，不要跟台鐵松山車站東西區停車場搞混。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T10:45:00+08:00" data-end="2026-11-21T12:15:00+08:00">
+            <div class="node-top"><span class="node-time">10:45–12:15</span><span class="node-count">—</span></div>
+            <h4>松山文創園區＋誠品松菸</h4>
+            <p>當天展覽：自然葡萄酒展（一號倉庫，僅此一天）、台北新藝術博覽會、CC 同人創作祭、justfont 快閃；誠品松菸 11:00–22:00。</p>
+            <p class="tip"><b>提醒：</b>排上午是為了避開傍晚市府前廣場造勢人潮——今天全天不進市政府站。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T12:15:00+08:00" data-end="2026-11-21T14:00:00+08:00">
+            <div class="node-top"><span class="node-time">12:15 移動・12:30–14:00</span><span class="node-count">—</span></div>
+            <h4>華山 1914＋巷貓披薩午餐</h4>
+            <p>捷運：國父紀念館站 → 板南線 2 站 → 忠孝新生站（約 6 分）＋步行約 5 分，12:30 抵達。午餐吃巷貓 Alleycat's Pizza（華山中3A 1F），入座立即點餐。</p>
+            <p class="tip"><b>提醒：</b>巷貓務必先在官網訂好 12:30；訂不到依序換一碗來、華山町（見總覽分頁午餐專節）。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T14:15:00+08:00" data-end="2026-11-21T16:15:00+08:00">
+            <div class="node-top"><span class="node-time">14:15 移動・14:30–16:15</span><span class="node-count">—</span></div>
+            <h4>赤峰街＋心中山</h4>
+            <p>捷運：忠孝新生站 → 台北車站轉乘 → 中山站（全天第 1 次換線，約 12 分），14:30 抵達。mitty 古著、香蕉貓、Travis Vintage、登波咖啡、卜卜商店等慢慢挖寶。</p>
+            <p class="tip"><b>提醒：</b>熱門咖啡週六下午候位可能 40 分鐘起——改外帶或不候位，別把時間耗在排隊上。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T16:20:00+08:00" data-end="2026-11-21T17:45:00+08:00">
+            <div class="node-top"><span class="node-time">16:20 移動・16:40 就位</span><span class="node-count">—</span></div>
+            <h4>大稻埕碼頭看日落（17:04）</h4>
+            <p>中山站同站換松山新店線 1 站 → 北門站（約 3 分）＋步行約 8 分，16:40 前到碼頭找好位置；看完日落順逛大稻埕貨櫃市集（週六 12:00–22:00）。</p>
+            <p class="tip"><b>提醒：</b>不要拖到日落前才趕路——16:20 準時離開赤峰街。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T17:45:00+08:00" data-end="2026-11-21T19:45:00+08:00">
+            <div class="node-top"><span class="node-time">17:45 移動・18:10–19:45</span><span class="node-count">—</span></div>
+            <h4>回松山・饒河街夜市晚餐</h4>
+            <p>北門站 → 松山新店線一班直達 → 松山站（約 14 分，不轉乘）；松山站 5 號出口出站約 1 分鐘即達夜市東端入口。慢慢吃、慢慢逛，19:45 收尾。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+          <article class="node" data-start="2026-11-21T20:00:00+08:00" data-end="2026-11-21T23:30:00+08:00">
+            <div class="node-top"><span class="node-time">20:00–20:30 取車</span><span class="node-count">—</span></div>
+            <h4>取車南下回台中（本趟終點）</h4>
+            <p>市民大道高架 → 環東大道 → 國3 南港交流道南下，估 22:30–23:30 抵達北屯。</p>
+            <p class="tip"><b>提醒：</b>全程不碰信義區、不走南京東路四段（小巨蛋演唱會 22:00 散場）；備選路線：堤頂大道 → 國1 內湖交流道。</p>
+            <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+          </article>
+        </div>
+        <p class="nodes-note">節點時間與提醒內容與「行程總覽」分頁同一份定案行程（2026-11-19 更新）；車程與捷運時間為預估值，實際依當日路況與班距為準。</p>
+      </div><!-- /panel-nodes -->
+
       <footer>
         <p>資料彙整日期：2026-11-19（訂房狀態結清版）。天氣為中央氣象署＋weather.com 文山區複查；關西休息站營業資訊、萬豪過夜停車備案、聖誕活動展期、松山車站停車場費率與週六造勢／管制資訊均為 2026-11-19 查證；景點資訊查核日期 2026-11-15；萬豪方案經 marriott.com 訂單查詢核實（2026-11-16），並已由使用者於 2026-11-19 電話向飯店確認訂房沒有問題；英迪格取消經 IHG 取消通知信核實（2026-11-19 13:57 寄達）。車程與捷運時間為預估值，實際依當日路況與班距為準；停車費率以各場現場公告為準。</p>
         <p>待確認：萬豪停車場總車位數與限高未公開；關西休息站西雅圖極品咖啡的開門時間各來源不一致；美麗華摩天輪週五打烊時間各來源說法不一（22:00／23:00／24:00），不影響 16:45 搭乘；華山町餐酒館低消規定各來源說法衝突，訂位時電話確認。上逸會 19:00 預訂已由使用者確認（相關團體成員身分）。訂房部分已無待辦：萬豪入住、英迪格取消均已完成。</p>
@@ -854,6 +1117,103 @@
         }
         tick();
         setInterval(tick, 1000);
+      })();
+    </script>
+    <script>
+      (function () {
+        // ---------- Tabs ----------
+        var tabBtns = Array.prototype.slice.call(document.querySelectorAll(".tab-btn"));
+        var panels = { overview: document.getElementById("panel-overview"), nodes: document.getElementById("panel-nodes") };
+        function selectTab(name, focus) {
+          tabBtns.forEach(function (b) {
+            var on = b.getAttribute("data-tab") === name;
+            b.setAttribute("aria-selected", on ? "true" : "false");
+            b.tabIndex = on ? 0 : -1;
+            if (on && focus) b.focus();
+          });
+          Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== name; });
+          if (window.location.hash !== "#" + name) {
+            try { history.replaceState(null, "", "#" + name); } catch (e) {}
+          }
+          window.scrollTo(0, 0);
+        }
+        tabBtns.forEach(function (b) {
+          b.addEventListener("click", function () { selectTab(b.getAttribute("data-tab"), false); });
+          b.addEventListener("keydown", function (e) {
+            if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+            var i = tabBtns.indexOf(b);
+            var n = tabBtns[(i + (e.key === "ArrowRight" ? 1 : tabBtns.length - 1)) % tabBtns.length];
+            selectTab(n.getAttribute("data-tab"), true);
+          });
+        });
+        if (window.location.hash === "#nodes") selectTab("nodes", false);
+
+        // ---------- Node cards: now-highlight + per-card countdown ----------
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(".node[data-start]")).map(function (el) {
+          return {
+            el: el,
+            start: new Date(el.getAttribute("data-start")).getTime(),
+            end: new Date(el.getAttribute("data-end")).getTime(),
+            title: el.querySelector("h4").textContent,
+            count: el.querySelector(".node-count")
+          };
+        });
+        var clockEl = document.getElementById("now-clock");
+        var phaseEl = document.getElementById("now-phase");
+        var jumpBtn = document.getElementById("jump-now");
+        var clockFmt = new Intl.DateTimeFormat("zh-TW", { timeZone: "Asia/Taipei", month: "numeric", day: "numeric", weekday: "short", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+        function pad(n) { return (n < 10 ? "0" : "") + n; }
+        function fmtDur(ms) {
+          var s = Math.max(0, Math.floor(ms / 1000));
+          var d = Math.floor(s / 86400); s -= d * 86400;
+          var h = Math.floor(s / 3600); s -= h * 3600;
+          var m = Math.floor(s / 60); s -= m * 60;
+          if (d > 0) return d + " 天 " + pad(h) + ":" + pad(m) + ":" + pad(s);
+          return pad(h) + ":" + pad(m) + ":" + pad(s);
+        }
+        var focusIdx = -1;
+        function tickNodes() {
+          var now = Date.now();
+          // Current card: the one whose window contains now; in a gap, the
+          // previous card stays "current" until the next one starts.
+          var cur = -1;
+          for (var i = 0; i < nodes.length; i++) { if (nodes[i].start <= now) cur = i; }
+          if (cur >= 0 && now >= nodes[nodes.length - 1].end) cur = -2; // trip finished
+          focusIdx = cur >= 0 ? cur : (cur === -1 ? 0 : nodes.length - 1);
+          nodes.forEach(function (n, i) {
+            var isNow = i === cur;
+            var isPast = !isNow && (now >= n.end || i < cur);
+            n.el.classList.toggle("is-now", isNow);
+            n.el.classList.toggle("is-past", isPast);
+            if (isNow) {
+              n.count.textContent = "進行中・剩 " + fmtDur(n.end - now);
+              n.count.classList.remove("soon");
+            } else if (now < n.start) {
+              n.count.textContent = "還有 " + fmtDur(n.start - now);
+              n.count.classList.toggle("soon", n.start - now < 3600 * 1000);
+            } else {
+              n.count.textContent = "已結束";
+              n.count.classList.remove("soon");
+            }
+          });
+          clockEl.textContent = clockFmt.format(new Date(now));
+          if (cur >= 0) {
+            phaseEl.innerHTML = "目前階段：<b>" + nodes[cur].title + "</b>" + (cur + 1 < nodes.length ? "・下一個：" + nodes[cur + 1].title + "（還有 " + fmtDur(nodes[cur + 1].start - now) + "）" : "");
+            jumpBtn.textContent = "跳到現在這張卡 ↓";
+          } else if (cur === -1) {
+            phaseEl.innerHTML = "行程尚未開始・第一個節點：<b>" + nodes[0].title + "</b>（還有 " + fmtDur(nodes[0].start - now) + "）";
+            jumpBtn.textContent = "跳到下一個節點 ↓";
+          } else {
+            phaseEl.innerHTML = "本趟行程已全部結束，辛苦了！";
+            jumpBtn.textContent = "跳到最後一張卡 ↓";
+          }
+        }
+        jumpBtn.addEventListener("click", function () {
+          var t = nodes[focusIdx];
+          if (t) t.el.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        tickNodes();
+        setInterval(tickNodes, 1000);
       })();
     </script>
   </body>
