@@ -505,13 +505,52 @@
       .node.is-past::before { border-color: var(--line); background: var(--surface-2); }
       .node.is-past .node-count { background: var(--surface-2); color: var(--ink-faint); }
       .nodes-note { font-size: 13px; color: var(--ink-faint); margin-top: 6px; }
+
+      /* ---------- One-tap navigation ---------- */
+      .nav-full { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+      @media (max-width: 720px) { .nav-full { grid-template-columns: 1fr; } }
+      .nav-full-btn {
+        display: block; text-decoration: none;
+        background: var(--pine-deep); color: #eef5ef;
+        border-radius: 14px; padding: 16px 18px;
+        font-weight: 900; font-size: 16.5px; line-height: 1.45;
+      }
+      .nav-full-btn span { display: block; font-size: 13px; font-weight: 500; color: #bcd4c2; margin-top: 3px; }
+      @media (prefers-color-scheme: dark) { .nav-full-btn { background: var(--pine); color: #0d2018; } .nav-full-btn span { color: #23402f; } }
+      .nav-group { margin-top: 14px; }
+      .nav-group h3 { margin: 0 0 10px; font-size: 16px; font-weight: 900; }
+      .nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      @media (max-width: 860px) { .nav-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .nav-grid { grid-template-columns: 1fr; } }
+      .nav-btn {
+        display: flex; align-items: center; justify-content: space-between; gap: 8px;
+        text-decoration: none;
+        background: var(--surface); color: var(--ink);
+        border: 1.5px solid var(--pine);
+        border-radius: 12px; padding: 12px 14px;
+        font-weight: 700; font-size: 15px; line-height: 1.4;
+        min-height: 3rem;
+      }
+      .nav-btn .arr { color: var(--pine); font-weight: 900; flex: 0 0 auto; }
+      .nav-btn:active { background: var(--sky-bg); }
+      .node-nav {
+        display: inline-flex; align-items: center; gap: 6px;
+        margin-top: 10px;
+        text-decoration: none;
+        background: var(--pine-deep); color: #eef5ef;
+        border-radius: 999px; padding: 9px 16px;
+        font-weight: 900; font-size: 14.5px;
+        min-height: 2.5rem;
+      }
+      @media (prefers-color-scheme: dark) { .node-nav { background: var(--pine); color: #0d2018; } }
+      .node-nav:active { opacity: .85; }
     </style>
   </head>
   <body>
     <div class="wrap">
 
       <!-- Generation time: top-right corner, small type -->
-      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T22:49:00+08:00">2026-11-19 22:49</time>（台北時間）・每 30 分鐘複查更新</div>
+      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T22:58:00+08:00">2026-11-19 22:58</time>（台北時間）・每 30 分鐘複查更新</div>
 
       <!-- Tabs (page top) -->
       <nav class="tab-bar" role="tablist" aria-label="頁面分頁">
@@ -565,6 +604,43 @@
       </div>
 
       <div id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+      <!-- One-tap Google Maps navigation -->
+      <section aria-labelledby="nav-h" style="margin-top:28px">
+        <div class="sec-head">
+          <h2 id="nav-h">🧭 一鍵導航</h2>
+          <span class="tag">點按鈕直接開 Google Maps 導航</span>
+        </div>
+        <p class="sec-lede">全程每一段路線都做好了：<b>點下面的按鈕，就會直接打開 Google Maps 並進入導航畫面</b>——目的地和交通方式（開車／步行／捷運）都已設好，起點由 Google Maps 自動抓你當下的位置，你只要按「開始」就能出發，不用再自己輸入地址。節點提示卡分頁裡，每張卡底部也有同一個「導航到這裡 →」按鈕，走到哪一站就點哪一張卡，最快。</p>
+        <div class="nav-full">
+          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;waypoints=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80%7C%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">Day 1 開車全段 →<span>北屯 → 關西服務區 → 台北市立動物園 → 台北萬豪酒店（一次看完整天開車路線）</span></a>
+          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99&amp;waypoints=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80%7C%E8%8F%AF%E5%B1%B11914%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80%7C%E8%B5%A4%E5%B3%B0%E8%A1%97%7C%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD&amp;destination=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82&amp;travelmode=transit" target="_blank" rel="noopener">Day 2 捷運全段 →<span>松山車站 → 松菸 → 華山 → 赤峰街 → 大稻埕 → 饒河夜市（一次看完整天捷運路線）</span></a>
+        </div>
+        <div class="nav-group">
+          <h3>Day 1・11/20（五）逐段導航</h3>
+          <div class="nav-grid">
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">開車到關西服務區<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">開車到台北市立動物園<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">開車到台北萬豪酒店<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">步行到美麗華百樂園<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">步行到 NOKE 忠泰樂生活（上逸會）<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%8C%97%E6%AD%A1%E6%A8%82%E8%80%B6%E8%AA%95%E5%9F%8E&amp;travelmode=transit" target="_blank" rel="noopener">搭捷運到新北歡樂耶誕城<span class="arr">→</span></a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <h3>Day 2・11/21（六）逐段導航</h3>
+          <div class="nav-grid">
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">開車到松山車站地下停車場<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">步行到松山文創園區<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E8%8F%AF%E5%B1%B11914%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80&amp;travelmode=transit" target="_blank" rel="noopener">搭捷運到華山1914<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E8%B5%A4%E5%B3%B0%E8%A1%97&amp;travelmode=transit" target="_blank" rel="noopener">搭捷運到赤峰街<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD&amp;travelmode=transit" target="_blank" rel="noopener">搭捷運到大稻埕碼頭<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82&amp;travelmode=transit" target="_blank" rel="noopener">搭捷運到饒河街觀光夜市<span class="arr">→</span></a>
+            <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">開車回台中市北屯區<span class="arr">→</span></a>
+          </div>
+        </div>
+        <p class="src">怎麼用最快：出發前打開「節點提示卡」分頁，現在亮起的那張卡底部就有「導航到這裡 →」，點下去 Google Maps 會以你現在的位置為起點、帶好目的地與交通方式，直接按「開始」即可。開車段 Google Maps 會即時避開塞車路段，時間以它當下顯示為準。</p>
+      </section>
+
       <!-- Hotel status settled -->
       <div class="confirm" role="note" aria-label="訂房狀態已結清">
         <h2>訂房已結清：萬豪電話確認完成・英迪格已取消</h2>
@@ -978,6 +1054,7 @@
             <p class="tip"><b>提醒：</b>出發前先看一眼 1968 即時路況；05:45 準時走，才守得住後面每一站。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>北屯區 11/20 清晨約 15°C、陰天，氣象署降雨 20%、weather.com 10%（多雲、高溫 20°C、低溫 14°C）；國1 即時路況（1968，22:05 查）：低速路段 0 段、最低速路段 62 km/h，無影響本路線之封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到關西服務區 →</a>
           </article>
           <article class="node" data-start="2026-11-20T07:00:00+08:00" data-end="2026-11-20T08:00:00+08:00">
             <div class="node-top"><span class="node-time">07:00–08:00</span><span class="node-count">—</span></div>
@@ -986,6 +1063,7 @@
             <p class="tip"><b>提醒：</b>休息站<b>沒有星巴克</b>；招牌關西便當平日 11:00 才開賣，買不到、不要等它。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮氣象署逐時 07:00 約 13°C、體感約 11°C，降雨機率 20%（3 小時區間，全日 20%）；weather.com 關西多雲、高溫 18°C、低溫 12°C、降雨 10%。麥當勞關西服務區店 06:30–22:00 營業中；國3 北上無影響本路線之封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T08:00:00+08:00" data-end="2026-11-20T09:00:00+08:00">
             <div class="node-top"><span class="node-time">08:00 準時出發</span><span class="node-count">—</span></div>
@@ -994,6 +1072,7 @@
             <p class="tip"><b>提醒：</b>08:00 是死線——晚出發就直接吃掉動物園開園初的低人潮時段。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮 08:00 約 13–14°C、降雨 20%（氣象署逐時）；國3 北上路況無封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T09:00:00+08:00" data-end="2026-11-20T14:30:00+08:00">
             <div class="node-top"><span class="node-time">09:00–14:30</span><span class="node-count">—</span></div>
@@ -1002,6 +1081,7 @@
             <p class="tip"><b>提醒：</b>若飄陣雨，先轉大貓熊館、企鵝館、兩棲爬蟲館等室內館躲 30–60 分鐘，帶件輕便雨衣即可。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>文山區氣象署逐時 09:00 約 16°C、12:00 約 17°C、14:00 約 17°C，降雨機率各時段 20%；weather.com 文山 11/20 多雲、高溫 18°C、降雨 10%。動物園 09:00–17:00、16:00 停止入園，無全園休園；週五非輪休日，大貓熊館正常開放。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T14:30:00+08:00" data-end="2026-11-20T15:00:00+08:00">
             <div class="node-top"><span class="node-time">14:30–15:00</span><span class="node-count">—</span></div>
@@ -1009,6 +1089,7 @@
             <p>動物園 → 台北萬豪，估 25–35 分，銜接 15:00–16:00 的 check-in 窗口，不用趕。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>文山區 14:00 約 17°C、降雨 20%（氣象署逐時）；往大直路況無封閉公告。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T15:00:00+08:00" data-end="2026-11-20T16:00:00+08:00">
             <div class="node-top"><span class="node-time">15:00–16:00</span><span class="node-count">—</span></div>
@@ -1017,6 +1098,7 @@
             <p class="tip"><b>提醒：</b>先卡位、再輕裝——萬一滿位，備案順序：劍南路站轉乘停車場 → NOKE → 春大直（詳見總覽分頁）。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 15:00 約 17°C、降雨 20%；weather.com 中山多雲、高溫 19°C、降雨 10%。萬豪與周邊停車無公開異動。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T16:00:00+08:00" data-end="2026-11-20T17:15:00+08:00">
             <div class="node-top"><span class="node-time">16:00 出發・16:45 搭乘</span><span class="node-count">—</span></div>
@@ -1025,6 +1107,7 @@
             <p class="tip"><b>提醒：</b>透明車廂全場僅 2 個，搭一般車廂即可、不用等；排隊人多就 16:05 先搭一圈，日落改在地面看，晚餐時間不受影響。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區 16:00 約 16–17°C、17:00 約 16°C、降雨 20%（氣象署逐時），日落 17:04；美麗華百樂園 11:00–22:00、摩天輪營業中，16:45 搭乘不受影響。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T17:15:00+08:00" data-end="2026-11-20T18:45:00+08:00">
             <div class="node-top"><span class="node-time">17:15–18:45</span><span class="node-count">—</span></div>
@@ -1032,6 +1115,7 @@
             <p>搭完摩天輪就在大直生活圈慢慢逛：美麗華館內，或過馬路到 NOKE 忠泰樂生活（11:00–22:00），不用再移動車輛。逛到 18:40 收尾。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區 17:00–18:00 約 15–16°C、降雨 20%（氣象署逐時；入夜 weather.com 降雨 10%）；NOKE、美麗華週五均營業至 22:00。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T18:45:00+08:00" data-end="2026-11-20T21:00:00+08:00">
             <div class="node-top"><span class="node-time">18:45 出發・19:00 入席</span><span class="node-count">—</span></div>
@@ -1040,6 +1124,7 @@
             <p class="tip"><b>提醒：</b>預訂已確認、直接入席；晚餐不要拖過 21:00，下一張卡的耶誕城主燈秀時間貼齊。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區入夜約 15°C、降雨 20%（氣象署逐時）；NOKE 週五營業至 22:00，19:00 晚餐預訂已確認。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T21:00:00+08:00" data-end="2026-11-20T23:00:00+08:00">
             <div class="node-top"><span class="node-time">21:10 出發・23:00 熄燈</span><span class="node-count">—</span></div>
@@ -1048,6 +1133,7 @@
             <p><b>輕量線（想休息）：</b>文湖線 2 站到大湖公園夜間散步，早點回萬豪——今天 05:45 就出發了。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>板橋區夜間多雲、低溫 13°C，weather.com 降雨 0–10%；氣象署新北 11/20 晚晴時多雲 13–15°C。耶誕城亮燈 17:30–23:00、主燈秀每整點半點、22:00 最後一場有聲版維持；北捷正常營運（11/19 狀態）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%8C%97%E6%AD%A1%E6%A8%82%E8%80%B6%E8%AA%95%E5%9F%8E&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-20T23:00:00+08:00" data-end="2026-11-21T00:10:00+08:00">
             <div class="node-top"><span class="node-time">約 23:45–00:10 回到</span><span class="node-count">—</span></div>
@@ -1055,6 +1141,7 @@
             <p>耶誕城回程約 23:45–00:10 抵達（輕量線更早）。回房休息，Day 2 09:30 再出發——睡飽最重要。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>回程時段台北入夜約 15°C、降雨 20%（氣象署逐時）；北捷正常營運（11/19 狀態）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">導航回台北萬豪 →</a>
           </article>
         </div>
 
@@ -1067,6 +1154,7 @@
             <p class="tip"><b>提醒：</b>退房後第一件事就是去松山把車安置好，之後整天不用再想停車。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 09:00 約 17°C、降雨 0%、晴時多雲；清晨低溫約 13–14°C，出門注意保暖。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">導航到松山車站停車場 →</a>
           </article>
           <article class="node" data-start="2026-11-21T10:00:00+08:00" data-end="2026-11-21T10:45:00+08:00">
             <div class="node-top"><span class="node-time">10:00–10:45</span><span class="node-count">—</span></div>
@@ -1075,6 +1163,7 @@
             <p class="tip"><b>提醒：</b>導航認「松山路 11 號」這座，不要跟台鐵松山車站東西區停車場搞混。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>松山區氣象署逐時 10:00 前後約 17–19°C、降雨 0%；松山車站地下停車場週五至週日及假日 NT$50／時、當日當次上限 NT$300、24 小時，無費率異動；萬豪往松山路況無封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T10:45:00+08:00" data-end="2026-11-21T12:15:00+08:00">
             <div class="node-top"><span class="node-time">10:45–12:15</span><span class="node-count">—</span></div>
@@ -1083,6 +1172,7 @@
             <p class="tip"><b>提醒：</b>排上午是為了避開傍晚市府前廣場造勢人潮——今天全天不進市政府站。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>信義區氣象署逐時 11:00 約 17°C、降雨 0%、晴時多雲；松菸當日活動維持：自然葡萄酒展 Buvons Nature 11:00–17:00（一號倉庫）、新藝術博覽會、CC 同人祭。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T12:15:00+08:00" data-end="2026-11-21T14:00:00+08:00">
             <div class="node-top"><span class="node-time">12:15 移動・12:30–14:00</span><span class="node-count">—</span></div>
@@ -1091,6 +1181,7 @@
             <p class="tip"><b>提醒：</b>巷貓不訂位、現場決定；現場等太久就依序換一碗來、華山町（見總覽分頁午餐專節）。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>中正區氣象署逐時 12:00 約 20°C、降雨 0%、晴時多雲；華山當日活動維持（Hello Kitty 快閃、國泰人壽陪伴展等），巷貓 Alleycat's Pizza 營業中、週六時段涵蓋 12:30，現場候位策略不變。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E8%8F%AF%E5%B1%B11914%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T14:15:00+08:00" data-end="2026-11-21T16:15:00+08:00">
             <div class="node-top"><span class="node-time">14:15 移動・14:30–16:15</span><span class="node-count">—</span></div>
@@ -1099,6 +1190,7 @@
             <p class="tip"><b>提醒：</b>熱門咖啡週六下午候位可能 40 分鐘起——改外帶或不候位，別把時間耗在排隊上。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>大同區氣象署逐時 14:00–15:00 約 19–20°C、降雨 0%、晴時多雲，戶外無雨提示。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E8%B5%A4%E5%B3%B0%E8%A1%97&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T16:20:00+08:00" data-end="2026-11-21T17:45:00+08:00">
             <div class="node-top"><span class="node-time">16:20 移動・16:40 就位</span><span class="node-count">—</span></div>
@@ -1107,6 +1199,7 @@
             <p class="tip"><b>提醒：</b>不要拖到日落前才趕路——16:20 準時離開赤峰街。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>大同區 16:00–17:00 約 17–19°C、降雨 0%（氣象署逐時），日落 17:04；大稻埕貨櫃市集週六 12:00–22:00。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T17:45:00+08:00" data-end="2026-11-21T19:45:00+08:00">
             <div class="node-top"><span class="node-time">17:45 移動・18:10–19:45</span><span class="node-count">—</span></div>
@@ -1114,6 +1207,7 @@
             <p>北門站 → 松山新店線一班直達 → 松山站（約 14 分，不轉乘）；松山站 5 號出口出站約 1 分鐘即達夜市東端入口。慢慢吃、慢慢逛，19:45 收尾。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>松山區 18:00 約 17°C、降雨 0%（氣象署逐時）；饒河夜市 17:00–24:00（00:00）維持。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
           <article class="node" data-start="2026-11-21T20:00:00+08:00" data-end="2026-11-21T23:30:00+08:00">
             <div class="node-top"><span class="node-time">20:00–20:30 取車</span><span class="node-count">—</span></div>
@@ -1122,6 +1216,7 @@
             <p class="tip"><b>提醒：</b>全程不碰信義區、不走南京東路四段（小巨蛋演唱會 22:00 散場）；備選路線：堤頂大道 → 國1 內湖交流道。</p>
             <p class="wxline"><b>逐時查證（22:09）：</b>台北入夜約 15–17°C、降雨 0%（氣象署逐時）；市府路（松高–松壽）11/21 00:00–11/22 03:00 雙向封閉、新仁愛路例假日管制維持，本行程本就避開信義市府區；1968 環東→國3 與備選國1 內湖無封閉公告，出發前再看即時路況。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
           </article>
         </div>
         <p class="nodes-note">節點時間與提醒內容與「行程總覽」分頁同一份定案行程（2026-11-19 更新）；車程與捷運時間為預估值，實際依當日路況與班距為準。</p>
