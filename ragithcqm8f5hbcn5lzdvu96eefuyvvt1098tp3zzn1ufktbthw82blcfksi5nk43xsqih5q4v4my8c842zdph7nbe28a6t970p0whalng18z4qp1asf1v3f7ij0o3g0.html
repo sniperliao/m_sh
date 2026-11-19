@@ -474,6 +474,14 @@
       .node p { margin: 0 0 6px; font-size: 14.5px; color: var(--ink-soft); }
       .node p:last-of-type { margin-bottom: 0; }
       .node .tip b { color: var(--amber); }
+      .node .wxline {
+        font-size: 13.5px;
+        color: var(--sky);
+        background: var(--sky-bg);
+        border-radius: 8px;
+        padding: 6px 10px;
+      }
+      .node .wxline b { color: var(--sky); }
       .node-now-badge {
         display: none;
         margin-top: 10px;
@@ -503,7 +511,7 @@
     <div class="wrap">
 
       <!-- Generation time: top-right corner, small type -->
-      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T22:04:00+08:00">2026-11-19 22:04</time>（台北時間）・每 30 分鐘複查更新</div>
+      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T22:09:00+08:00">2026-11-19 22:09</time>（台北時間）・每 30 分鐘複查更新</div>
 
       <!-- Tabs (page top) -->
       <nav class="tab-bar" role="tablist" aria-label="頁面分頁">
@@ -575,9 +583,9 @@
       <section aria-labelledby="wx-h">
         <div class="sec-head">
           <h2 id="wx-h">天氣快照</h2>
-          <span class="tag">2026-11-19 複查・中央氣象署＋weather.com（文山區）</span>
+          <span class="tag">2026-11-19 22:09 複查・中央氣象署鄉鎮逐時預報為主＋weather.com 交叉</span>
         </div>
-        <p class="sec-lede">11/20（五）文山區多雲、降雨 10–20%、13–18°C：大概率是乾的陰天，但不是零風險——週五 05:45 出發前再看一次文山區逐時預報和雷達；真遇到一陣雨，動物園先走大貓熊館、企鵝館、兩棲爬蟲館等室內館躲 30–60 分鐘，帶件輕便雨衣外套即可。11/21（六）降雨 0%、晴時多雲、14–21°C，是兩天裡最穩的一天，正好留給整天在市區走逛，17:04 在大稻埕碼頭看日落。</p>
+        <p class="sec-lede">逐時版（與節點提示卡逐卡一致）：11/20（五）台北各區氣象署逐時降雨機率全日各時段均 20%、weather.com 10%，陰天、15–17°C——所有戶外時段都低於 30% 降雨門檻，不需雨天備案；動物園時段（文山區 09:00 約 16°C、12:00 約 17°C、14:00 約 17°C）帶件輕便雨衣外套即可。11/21（六）台北各區氣象署逐時降雨機率 0%、晴時多雲：清晨約 13–14°C、09:00 約 17°C、12:00 約 20°C、15:00 約 19°C、18:00 約 17°C，是兩天裡最穩的一天，正好留給整天在市區走逛，17:04 在大稻埕碼頭看日落。</p>
         <div class="wx-grid">
           <div class="wx">
             <div class="d">11/19 <span class="dow">週四・今天</span></div>
@@ -588,18 +596,18 @@
           </div>
           <div class="wx focus">
             <div class="d">11/20 <span class="dow">週五・動物園日</span></div>
-            <div class="cond">多雲</div>
-            <div class="rain-num">10–20<span>%</span></div>
-            <div class="bar"><i style="width:15%"></i></div>
-            <div class="temp">13–18°C・清晨偏冷，保暖優先，輕便雨具備用</div>
+            <div class="cond">陰天（氣象署逐時・weather.com 多雲）</div>
+            <div class="rain-num">20<span>%</span></div>
+            <div class="bar"><i style="width:20%"></i></div>
+            <div class="temp">逐時 15–17°C：09:00 約 16°C、12:00 約 17°C、15:00 約 17°C（weather.com 降雨 10%）・清晨偏冷，保暖優先，輕便雨具備用</div>
             <span class="focus-tag">平日人少・動物園先行</span>
           </div>
           <div class="wx focus">
             <div class="d">11/21 <span class="dow">週六・全日捷運日</span></div>
-            <div class="cond">晴時多雲</div>
+            <div class="cond">晴時多雲（氣象署逐時）</div>
             <div class="rain-num">0<span>%</span></div>
             <div class="bar"><i style="width:0%"></i></div>
-            <div class="temp">14–21°C・日落 17:04（大稻埕碼頭）</div>
+            <div class="temp">逐時：清晨約 13–14°C、09:00 約 17°C、12:00 約 20°C、15:00 約 19°C、18:00 約 17°C・日落 17:04（大稻埕碼頭）</div>
             <span class="focus-tag">本週最穩・整天戶外走逛</span>
           </div>
         </div>
@@ -967,6 +975,7 @@
             <h4>台中北屯出發 → 關西休息站</h4>
             <p>國1 大雅交流道上 → 新竹系統轉國3，約 108 km、估 70 分，07:00 抵達關西。</p>
             <p class="tip"><b>提醒：</b>出發前先看一眼 1968 即時路況；05:45 準時走，才守得住後面每一站。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>北屯區 11/20 清晨約 15°C、陰天，氣象署降雨 20%、weather.com 10%（多雲、高溫 20°C、低溫 14°C）；國1 即時路況（1968，22:05 查）：低速路段 0 段、最低速路段 62 km/h，無影響本路線之封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T07:00:00+08:00" data-end="2026-11-20T08:00:00+08:00">
@@ -974,6 +983,7 @@
             <h4>關西休息站：早餐＋寫報告（停滿 1 小時）</h4>
             <p>早餐吃麥當勞（06:30 已開門）；寫報告坐 1F 靠窗充電座位區（110V 插座＋免費 WiFi，自備充電器）。</p>
             <p class="tip"><b>提醒：</b>休息站<b>沒有星巴克</b>；招牌關西便當平日 11:00 才開賣，買不到、不要等它。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮氣象署逐時 07:00 約 13°C、體感約 11°C，降雨機率 20%（3 小時區間，全日 20%）；weather.com 關西多雲、高溫 18°C、低溫 12°C、降雨 10%。麥當勞關西服務區店 06:30–22:00 營業中；國3 北上無影響本路線之封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T08:00:00+08:00" data-end="2026-11-20T09:00:00+08:00">
@@ -981,19 +991,22 @@
             <h4>離開關西 → 木柵動物園（死線）</h4>
             <p>國3 北上、木柵交流道下（動物園官方建議路線），週五晨峰估 55–85 分，預計 08:55–09:25 抵達。</p>
             <p class="tip"><b>提醒：</b>08:00 是死線——晚出發就直接吃掉動物園開園初的低人潮時段。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮 08:00 約 13–14°C、降雨 20%（氣象署逐時）；國3 北上路況無封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T09:00:00+08:00" data-end="2026-11-20T14:30:00+08:00">
             <div class="node-top"><span class="node-time">09:00–14:30</span><span class="node-count">—</span></div>
             <h4>臺北市立動物園</h4>
             <p>停河川高灘地停車場（平日 NT$50／次、1,228 格）。入園先直衝大貓熊館——週五平日自由入館、免抽券免預約，再慢慢往上逛。門票 NT$100。</p>
-            <p class="tip"><b>提醒：</b>若飄陣雨，先轉大貓熊館、企鵝館、兩棲爬蟲館等室內館躲 30–60 分鐘。</p>
+            <p class="tip"><b>提醒：</b>若飄陣雨，先轉大貓熊館、企鵝館、兩棲爬蟲館等室內館躲 30–60 分鐘，帶件輕便雨衣即可。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>文山區氣象署逐時 09:00 約 16°C、12:00 約 17°C、14:00 約 17°C，降雨機率各時段 20%；weather.com 文山 11/20 多雲、高溫 18°C、降雨 10%。動物園 09:00–17:00、16:00 停止入園，無全園休園；週五非輪休日，大貓熊館正常開放。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T14:30:00+08:00" data-end="2026-11-20T15:00:00+08:00">
             <div class="node-top"><span class="node-time">14:30–15:00</span><span class="node-count">—</span></div>
             <h4>離園，開車回大直</h4>
             <p>動物園 → 台北萬豪，估 25–35 分，銜接 15:00–16:00 的 check-in 窗口，不用趕。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>文山區 14:00 約 17°C、降雨 20%（氣象署逐時）；往大直路況無封閉公告。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T15:00:00+08:00" data-end="2026-11-20T16:00:00+08:00">
@@ -1001,6 +1014,7 @@
             <h4>台北萬豪 check-in：先停車卡位</h4>
             <p>抵達先把車停進 B2–B4（免費停車 15:00 起算，早到每小時 NT$100）。約 15:40 進房安頓、放行李；車今晚不再移動。</p>
             <p class="tip"><b>提醒：</b>先卡位、再輕裝——萬一滿位，備案順序：劍南路站轉乘停車場 → NOKE → 春大直（詳見總覽分頁）。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 15:00 約 17°C、降雨 20%；weather.com 中山多雲、高溫 19°C、降雨 10%。萬豪與周邊停車無公開異動。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T16:00:00+08:00" data-end="2026-11-20T17:15:00+08:00">
@@ -1008,12 +1022,14 @@
             <h4>步行去美麗華・摩天輪日落場</h4>
             <p>16:00 從萬豪步行約 5 分到美麗華；摩天輪一圈約 17 分、平日票 NT$150，16:45 左右上車，車廂裡正好接 17:04 日落，約 17:15 下車。</p>
             <p class="tip"><b>提醒：</b>透明車廂全場僅 2 個，搭一般車廂即可、不用等；排隊人多就 16:05 先搭一圈，日落改在地面看，晚餐時間不受影響。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中山區 16:00 約 16–17°C、17:00 約 16°C、降雨 20%（氣象署逐時），日落 17:04；美麗華百樂園 11:00–22:00、摩天輪營業中，16:45 搭乘不受影響。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T17:15:00+08:00" data-end="2026-11-20T18:45:00+08:00">
             <div class="node-top"><span class="node-time">17:15–18:45</span><span class="node-count">—</span></div>
             <h4>美麗華／NOKE 逛街</h4>
             <p>搭完摩天輪就在大直生活圈慢慢逛：美麗華館內，或過馬路到 NOKE 忠泰樂生活（11:00–22:00），不用再移動車輛。逛到 18:40 收尾。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中山區 17:00–18:00 約 15–16°C、降雨 20%（氣象署逐時；入夜 weather.com 降雨 10%）；NOKE、美麗華週五均營業至 22:00。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T18:45:00+08:00" data-end="2026-11-20T21:00:00+08:00">
@@ -1021,6 +1037,7 @@
             <h4>上逸會晚餐（NOKE 7F・預訂已確認）</h4>
             <p>18:45 步行往 NOKE（約 5–8 分）、18:55 抵達，19:00 入席；預估約 21:00 結束。</p>
             <p class="tip"><b>提醒：</b>預訂已確認、直接入席；晚餐不要拖過 21:00，下一張卡的耶誕城主燈秀時間貼齊。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中山區入夜約 15°C、降雨 20%（氣象署逐時）；NOKE 週五營業至 22:00，19:00 晚餐預訂已確認。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T21:00:00+08:00" data-end="2026-11-20T23:00:00+08:00">
@@ -1028,12 +1045,14 @@
             <h4>聖誕夜遊二選一</h4>
             <p><b>主線（體力夠）：</b>21:10 劍南路站出發 → 約 21:55 抵板橋站 → 步行約 5 分到市民廣場，趕 22:00 最後一場有聲主燈秀（趕不上還有 22:30 後無聲版），亮燈至 23:00。</p>
             <p><b>輕量線（想休息）：</b>文湖線 2 站到大湖公園夜間散步，早點回萬豪——今天 05:45 就出發了。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>板橋區夜間多雲、低溫 13°C，weather.com 降雨 0–10%；氣象署新北 11/20 晚晴時多雲 13–15°C。耶誕城亮燈 17:30–23:00、主燈秀每整點半點、22:00 最後一場有聲版維持；北捷正常營運（11/19 狀態）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-20T23:00:00+08:00" data-end="2026-11-21T00:10:00+08:00">
             <div class="node-top"><span class="node-time">約 23:45–00:10 回到</span><span class="node-count">—</span></div>
             <h4>回台北萬豪休息</h4>
             <p>耶誕城回程約 23:45–00:10 抵達（輕量線更早）。回房休息，Day 2 09:30 再出發——睡飽最重要。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>回程時段台北入夜約 15°C、降雨 20%（氣象署逐時）；北捷正常營運（11/19 狀態）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
         </div>
@@ -1045,6 +1064,7 @@
             <h4>萬豪早餐，10:00 前退房</h4>
             <p>方案含早餐。今天降雨 0%、14–21°C，是本週最適合整天在外面走的一天。</p>
             <p class="tip"><b>提醒：</b>退房後第一件事就是去松山把車安置好，之後整天不用再想停車。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 09:00 約 17°C、降雨 0%、晴時多雲；清晨低溫約 13–14°C，出門注意保暖。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T10:00:00+08:00" data-end="2026-11-21T10:45:00+08:00">
@@ -1052,6 +1072,7 @@
             <h4>開車往松山・先把車停好</h4>
             <p>萬豪 → 松山車站地下停車場估約 20 分，10:30 停妥（429 格、24 小時、週六 NT$50／時、當日上限 NT$300，場內直通捷運松山站）；之後步行約 10 分到松菸。</p>
             <p class="tip"><b>提醒：</b>導航認「松山路 11 號」這座，不要跟台鐵松山車站東西區停車場搞混。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>松山區氣象署逐時 10:00 前後約 17–19°C、降雨 0%；松山車站地下停車場週五至週日及假日 NT$50／時、當日當次上限 NT$300、24 小時，無費率異動；萬豪往松山路況無封閉。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T10:45:00+08:00" data-end="2026-11-21T12:15:00+08:00">
@@ -1059,6 +1080,7 @@
             <h4>松山文創園區＋誠品松菸</h4>
             <p>當天展覽：自然葡萄酒展（一號倉庫，僅此一天）、台北新藝術博覽會、CC 同人創作祭、justfont 快閃；誠品松菸 11:00–22:00。</p>
             <p class="tip"><b>提醒：</b>排上午是為了避開傍晚市府前廣場造勢人潮——今天全天不進市政府站。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>信義區氣象署逐時 11:00 約 17°C、降雨 0%、晴時多雲；松菸當日活動維持：自然葡萄酒展 Buvons Nature 11:00–17:00（一號倉庫）、新藝術博覽會、CC 同人祭。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T12:15:00+08:00" data-end="2026-11-21T14:00:00+08:00">
@@ -1066,6 +1088,7 @@
             <h4>華山 1914＋巷貓披薩午餐</h4>
             <p>捷運：國父紀念館站 → 板南線 2 站 → 忠孝新生站（約 6 分）＋步行約 5 分，12:30 抵達。午餐吃巷貓 Alleycat's Pizza（華山中3A 1F），入座立即點餐。</p>
             <p class="tip"><b>提醒：</b>巷貓不訂位、現場決定；現場等太久就依序換一碗來、華山町（見總覽分頁午餐專節）。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>中正區氣象署逐時 12:00 約 20°C、降雨 0%、晴時多雲；華山當日活動維持（Hello Kitty 快閃、國泰人壽陪伴展等），巷貓 Alleycat's Pizza 營業中、週六時段涵蓋 12:30，現場候位策略不變。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T14:15:00+08:00" data-end="2026-11-21T16:15:00+08:00">
@@ -1073,6 +1096,7 @@
             <h4>赤峰街＋心中山</h4>
             <p>捷運：忠孝新生站 → 台北車站轉乘 → 中山站（全天第 1 次換線，約 12 分），14:30 抵達。mitty 古著、香蕉貓、Travis Vintage、登波咖啡、卜卜商店等慢慢挖寶。</p>
             <p class="tip"><b>提醒：</b>熱門咖啡週六下午候位可能 40 分鐘起——改外帶或不候位，別把時間耗在排隊上。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>大同區氣象署逐時 14:00–15:00 約 19–20°C、降雨 0%、晴時多雲，戶外無雨提示。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T16:20:00+08:00" data-end="2026-11-21T17:45:00+08:00">
@@ -1080,12 +1104,14 @@
             <h4>大稻埕碼頭看日落（17:04）</h4>
             <p>中山站同站換松山新店線 1 站 → 北門站（約 3 分）＋步行約 8 分，16:40 前到碼頭找好位置；看完日落順逛大稻埕貨櫃市集（週六 12:00–22:00）。</p>
             <p class="tip"><b>提醒：</b>不要拖到日落前才趕路——16:20 準時離開赤峰街。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>大同區 16:00–17:00 約 17–19°C、降雨 0%（氣象署逐時），日落 17:04；大稻埕貨櫃市集週六 12:00–22:00。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T17:45:00+08:00" data-end="2026-11-21T19:45:00+08:00">
             <div class="node-top"><span class="node-time">17:45 移動・18:10–19:45</span><span class="node-count">—</span></div>
             <h4>回松山・饒河街夜市晚餐</h4>
             <p>北門站 → 松山新店線一班直達 → 松山站（約 14 分，不轉乘）；松山站 5 號出口出站約 1 分鐘即達夜市東端入口。慢慢吃、慢慢逛，19:45 收尾。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>松山區 18:00 約 17°C、降雨 0%（氣象署逐時）；饒河夜市 17:00–24:00（00:00）維持。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
           <article class="node" data-start="2026-11-21T20:00:00+08:00" data-end="2026-11-21T23:30:00+08:00">
@@ -1093,6 +1119,7 @@
             <h4>取車南下回台中（本趟終點）</h4>
             <p>市民大道高架 → 環東大道 → 國3 南港交流道南下，估 22:30–23:30 抵達北屯。</p>
             <p class="tip"><b>提醒：</b>全程不碰信義區、不走南京東路四段（小巨蛋演唱會 22:00 散場）；備選路線：堤頂大道 → 國1 內湖交流道。</p>
+            <p class="wxline"><b>逐時查證（22:09）：</b>台北入夜約 15–17°C、降雨 0%（氣象署逐時）；市府路（松高–松壽）11/21 00:00–11/22 03:00 雙向封閉、新仁愛路例假日管制維持，本行程本就避開信義市府區；1968 環東→國3 與備選國1 內湖無封閉公告，出發前再看即時路況。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
           </article>
         </div>
