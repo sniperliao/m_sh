@@ -564,7 +564,7 @@
     <div class="wrap">
 
       <!-- Generation time: top-right corner, small type -->
-      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T23:16:00+08:00">2026-11-19 23:16</time>（台北時間）・每 30 分鐘複查更新</div>
+      <div class="gen-stamp" aria-label="本頁生成時間">本頁生成時間：<time datetime="2026-11-19T23:29:00+08:00">2026-11-19 23:29</time>（台北時間）・每 30 分鐘複查更新</div>
 
       <!-- Tabs (page top) -->
       <nav class="tab-bar" role="tablist" aria-label="頁面分頁">
@@ -622,43 +622,51 @@
       <section aria-labelledby="nav-h" style="margin-top:28px">
         <div class="sec-head">
           <h2 id="nav-h">🧭 一鍵導航</h2>
-          <span class="tag">點按鈕直接開 Google Maps 導航</span>
+          <span class="tag">所有按鈕起點都是你的現在位置</span>
         </div>
-        <p class="sec-lede">全程每一段都拆開寫清楚了，不再只有「到某地點」：<b>每個按鈕下方都有一段「怎麼去」</b>——捷運段寫明在哪一站上車、搭哪條線、往哪個方向、搭幾站、在哪站下車、走幾號出口、出站再步行多久；開車段寫明上哪個交流道、轉哪條國道；步行段寫明起訖點和約幾分鐘。<b>按鈕點開是起訖站都設好的 Google Maps 路線</b>，照文字走、或直接按「開始」導航都可以。節點提示卡分頁裡，每張卡也都有同一段「怎麼去」說明和導航按鈕，走到哪一站就看哪一張卡。</p>
+        <p class="sec-lede"><b>每一顆導航按鈕的起點都是你的「現在位置」</b>——不預設任何固定起點：你人當下在哪裡，Google Maps 就從哪裡開始導航，終點固定是下一個要去的地方。所以就算你提早離開、繞去別處、或不在預定地點，點下去都是從你現在的位置出發，不會被帶回上一站。全程每一段都拆開寫清楚了：<b>每個按鈕下方都有一段「怎麼去」</b>——捷運段寫明在哪一站上車、搭哪條線、往哪個方向、搭幾站、在哪站下車、走幾號出口、出站再步行多久；開車段寫明上哪個交流道、轉哪條國道；步行段寫明起訖點和約幾分鐘。節點提示卡分頁裡，每張卡也都有同一段「怎麼去」說明和導航按鈕（起點同樣是你的現在位置），走到哪一站就看哪一張卡。</p>
         <div class="nav-full">
-          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;waypoints=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80%7C%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">Day 1 開車全段 →<span>北屯 → 關西服務區 → 台北市立動物園 → 台北萬豪酒店（一次看完整天開車路線）</span></a>
-          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99&amp;waypoints=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80%7C%E8%8F%AF%E5%B1%B11914%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80%7C%E8%B5%A4%E5%B3%B0%E8%A1%97%7C%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD&amp;destination=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82&amp;travelmode=transit" target="_blank" rel="noopener">Day 2 捷運全段 →<span>松山車站 → 松菸 → 華山 → 赤峰街 → 大稻埕 → 饒河夜市（一次看完整天捷運路線）</span></a>
+          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;waypoints=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80%7C%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">Day 1 開車全段 →<span>現在位置 → 關西服務區 → 台北市立動物園 → 台北萬豪酒店（一次看完整天開車路線）</span></a>
+          <a class="nav-full-btn" href="https://www.google.com/maps/dir/?api=1&amp;waypoints=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80%7C%E8%8F%AF%E5%B1%B11914%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80%7C%E8%B5%A4%E5%B3%B0%E8%A1%97%7C%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD&amp;destination=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82&amp;travelmode=transit" target="_blank" rel="noopener">Day 2 捷運全段 →<span>現在位置 → 松菸 → 華山 → 赤峰街 → 大稻埕 → 饒河夜市（一次看完整天捷運路線）</span></a>
         </div>
         <div class="nav-group">
           <h3>Day 1・11/20（五）逐段導航</h3>
           <div class="nav-grid">
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">北屯 → 關西服務區（開車）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>台中北屯出發 → 國1 大雅交流道上 → 新竹系統交流道轉國3 → 關西服務區（國3 76.2K），約 108 km、估 70 分。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 關西服務區（開車）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>從你的現在位置出發（出發點是台中北屯）→ 國1 大雅交流道上 → 新竹系統交流道轉國3 → 關西服務區（國3 76.2K），約 108 km、估 70 分。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">關西服務區 → 台北市立動物園（開車）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>關西服務區出發 → 國3 北上 → 木柵交流道下 → 台北市立動物園，車停河川高灘地停車場（平日 NT$50/次），週五晨峰估 55–85 分。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北市立動物園（開車）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>從關西服務區出發 → 國3 北上 → 木柵交流道下 → 台北市立動物園，車停河川高灘地停車場（平日 NT$50/次），週五晨峰估 55–85 分。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">動物園 → 台北萬豪酒店（開車）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>動物園出發往大直，台北萬豪酒店（樂群二路199號），估 25–35 分；抵達先停 B2–B4 卡位。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北萬豪酒店（開車）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>從動物園出發往大直，台北萬豪酒店（樂群二路199號），估 25–35 分；抵達先停 B2–B4 卡位。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">萬豪 → 美麗華百樂園（步行）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>出飯店步行約 5 分到美麗華百樂園 5F 摩天輪廣場。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 美麗華百樂園（步行）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>出萬豪飯店步行約 5 分到美麗華百樂園 5F 摩天輪廣場。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">美麗華 → NOKE 上逸會（步行）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → NOKE 上逸會（步行）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>步行約 5–8 分到 NOKE 忠泰樂生活，上 7F 上逸會。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%8A%8D%E5%8D%97%E8%B7%AF%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">劍南路站 → 板橋站・耶誕城（捷運）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>劍南路站搭文湖線（往動物園方向）→ 忠孝復興站下車換板南線（往頂埔方向）→ 板橋站下車，2 號或 3A 出口，步行約 5 分到市民廣場；捷運車程 33 分（官方）。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%8A%8D%E5%8D%97%E8%B7%AF%E7%AB%99&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 劍南路站（步行進站）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>夜遊第一步先進站——從你的現在位置步行導航到捷運劍南路站（晚餐地點 NOKE 就在旁邊，步行幾分鐘即達），進站後照下一段搭車。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">板橋站 → 回台北萬豪酒店（捷運）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>板橋站搭板南線（往南港展覽館方向）→ 忠孝復興站換文湖線（往南港展覽館方向）→ 劍南路站下車，步行約 10 分回台北萬豪酒店。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 板橋站（捷運）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>劍南路站搭文湖線（往動物園方向）→ 忠孝復興站下車換板南線（往頂埔方向）→ 板橋站下車；捷運車程 33 分（官方）。點開是從你的現在位置到板橋站的捷運路線。</p>
+            </div>
+            <div class="nav-item">
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%8C%97%E6%AD%A1%E6%A8%82%E8%80%B6%E8%AA%95%E5%9F%8E&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 耶誕城・市民廣場（捷運）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>照上一段到板橋站下車，2 號或 3A 出口，步行約 5 分到市民廣場（耶誕城主燈區）。點開是從你的現在位置直達耶誕城會場的路線。</p>
+            </div>
+            <div class="nav-item">
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 回台北萬豪酒店（捷運）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>板橋站搭板南線（往南港展覽館方向）→ 忠孝復興站換文湖線（往南港展覽館方向）→ 劍南路站下車，步行約 10 分回台北萬豪酒店。點開是從你的現在位置（耶誕城一帶）回飯店的路線。</p>
             </div>
           </div>
         </div>
@@ -666,36 +674,36 @@
           <h3>Day 2・11/21（六）逐段導航</h3>
           <div class="nav-grid">
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">萬豪 → 松山車站地下停車場（開車）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>估約 20 分，導航終點「松山車站地下停車場」，入口認松山路 11 號（不要去台鐵松山車站東西區停車場，是不同一座）。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 松山車站地下停車場（開車）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>從萬豪出發估約 20 分，導航終點「松山車站地下停車場」，入口認松山路 11 號（不要去台鐵松山車站東西區停車場，是不同一座）。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">松山站 → 松山文創園區（步行）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 松山文創園區（步行）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>松山站出站步行約 10 分到松山文創園區。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%9C%8B%E7%88%B6%E7%B4%80%E5%BF%B5%E9%A4%A8%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">國父紀念館站 → 忠孝新生站・華山（捷運）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 忠孝新生站・華山（捷運）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>國父紀念館站搭板南線（往頂埔方向）2 站 → 忠孝新生站下車，步行約 5 分到華山1914；車程約 6 分。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">忠孝新生站 → 中山站・赤峰街（捷運）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 中山站・赤峰街（捷運）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>忠孝新生站搭板南線（往南港展覽館方向）1 站 → 台北車站換淡水信義線（往淡水方向）1 站 → 中山站下車，出站即心中山、赤峰街在步行範圍；全程約 12 分。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">中山站 → 北門站・大稻埕碼頭（捷運）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 北門站・大稻埕碼頭（捷運）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>中山站搭松山新店線（往松山方向）1 站 → 北門站下車，步行約 8 分到大稻埕碼頭；車程約 3 分。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">北門站 → 松山站・饒河夜市（捷運）<span class="arr">→</span></a>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 松山站・饒河夜市（捷運）<span class="arr">→</span></a>
               <p class="nav-desc"><b>怎麼去：</b>北門站搭松山新店線（往松山方向）直達松山站（約 14 分），5 號出口出站約 1 分到饒河夜市東端入口（慈祐宮旁）。</p>
             </div>
             <div class="nav-item">
-              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">松山 → 回台中市北屯區（開車）<span class="arr">→</span></a>
-              <p class="nav-desc"><b>怎麼去：</b>松山出發 → 市民大道高架 → 環東大道 → 國3 南港交流道南下（備選：堤頂大道 → 國1 內湖交流道），20:00–20:30 出發估 22:30–23:30 抵達北屯。</p>
+              <a class="nav-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 回台中市北屯區（開車）<span class="arr">→</span></a>
+              <p class="nav-desc"><b>怎麼去：</b>從松山出發 → 市民大道高架 → 環東大道 → 國3 南港交流道南下（備選：堤頂大道 → 國1 內湖交流道），20:00–20:30 出發估 22:30–23:30 抵達北屯。</p>
             </div>
           </div>
         </div>
-        <p class="src">怎麼用最快：出發前打開「節點提示卡」分頁，現在亮起的那張卡底部就有「怎麼去」文字說明和「導航到這裡 →」按鈕，點下去 Google Maps 會帶好這一段的起訖站與交通方式，直接按「開始」即可。開車段 Google Maps 會即時避開塞車路段，時間以它當下顯示為準。</p>
+        <p class="src">怎麼用最快：出發前打開「節點提示卡」分頁，現在亮起的那張卡底部就有「怎麼去」文字說明和導航按鈕；所有按鈕的起點都是你的現在位置、終點是下一站，點下去 Google Maps 會帶好終點與交通方式，直接按「開始」即可。開車段 Google Maps 會即時避開塞車路段，時間以它當下顯示為準。</p>
       </section>
 
       <!-- Hotel status settled -->
@@ -1112,7 +1120,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>北屯區 11/20 清晨約 15°C、陰天，氣象署降雨 20%、weather.com 10%（多雲、高溫 20°C、低溫 14°C）；國1 即時路況（1968，22:05 查）：低速路段 0 段、最低速路段 62 km/h，無影響本路線之封閉。</p>
             <p class="howto"><b>怎麼去：</b>台中北屯出發 → 國1 大雅交流道上 → 新竹系統交流道轉國3 → 關西服務區（國3 76.2K），約 108 km、估 70 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到關西服務區 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 關西服務區</a>
           </article>
           <article class="node" data-start="2026-11-20T07:00:00+08:00" data-end="2026-11-20T08:00:00+08:00">
             <div class="node-top"><span class="node-time">07:00–08:00</span><span class="node-count">—</span></div>
@@ -1122,7 +1130,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮氣象署逐時 07:00 約 13°C、體感約 11°C，降雨機率 20%（3 小時區間，全日 20%）；weather.com 關西多雲、高溫 18°C、低溫 12°C、降雨 10%。麥當勞關西服務區店 06:30–22:00 營業中；國3 北上無影響本路線之封閉。</p>
             <p class="howto"><b>怎麼去：</b>台中北屯出發 → 國1 大雅交流道上 → 新竹系統交流道轉國3 → 關西服務區（國3 76.2K），約 108 km、估 70 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 關西服務區</a>
           </article>
           <article class="node" data-start="2026-11-20T08:00:00+08:00" data-end="2026-11-20T09:00:00+08:00">
             <div class="node-top"><span class="node-time">08:00 準時出發</span><span class="node-count">—</span></div>
@@ -1132,7 +1140,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>關西鎮 08:00 約 13–14°C、降雨 20%（氣象署逐時）；國3 北上路況無封閉。</p>
             <p class="howto"><b>怎麼去：</b>關西服務區出發 → 國3 北上 → 木柵交流道下 → 台北市立動物園，車停河川高灘地停車場（平日 NT$50/次），週五晨峰估 55–85 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北市立動物園</a>
           </article>
           <article class="node" data-start="2026-11-20T09:00:00+08:00" data-end="2026-11-20T14:30:00+08:00">
             <div class="node-top"><span class="node-time">09:00–14:30</span><span class="node-count">—</span></div>
@@ -1142,7 +1150,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>文山區氣象署逐時 09:00 約 16°C、12:00 約 17°C、14:00 約 17°C，降雨機率各時段 20%；weather.com 文山 11/20 多雲、高溫 18°C、降雨 10%。動物園 09:00–17:00、16:00 停止入園，無全園休園；週五非輪休日，大貓熊館正常開放。</p>
             <p class="howto"><b>怎麼去：</b>關西服務區出發 → 國3 北上 → 木柵交流道下 → 台北市立動物園，車停河川高灘地停車場（平日 NT$50/次），週五晨峰估 55–85 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%97%9C%E8%A5%BF%E6%9C%8D%E5%8B%99%E5%8D%80&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北市立動物園</a>
           </article>
           <article class="node" data-start="2026-11-20T14:30:00+08:00" data-end="2026-11-20T15:00:00+08:00">
             <div class="node-top"><span class="node-time">14:30–15:00</span><span class="node-count">—</span></div>
@@ -1151,7 +1159,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>文山區 14:00 約 17°C、降雨 20%（氣象署逐時）；往大直路況無封閉公告。</p>
             <p class="howto"><b>怎麼去：</b>動物園出發往大直，台北萬豪酒店（樂群二路199號），估 25–35 分；抵達先停 B2–B4 卡位。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北萬豪酒店</a>
           </article>
           <article class="node" data-start="2026-11-20T15:00:00+08:00" data-end="2026-11-20T16:00:00+08:00">
             <div class="node-top"><span class="node-time">15:00–16:00</span><span class="node-count">—</span></div>
@@ -1161,7 +1169,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 15:00 約 17°C、降雨 20%；weather.com 中山多雲、高溫 19°C、降雨 10%。萬豪與周邊停車無公開異動。</p>
             <p class="howto"><b>怎麼去：</b>動物園出發往大直，台北萬豪酒店（樂群二路199號），估 25–35 分；抵達先停 B2–B4 卡位。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台北萬豪酒店</a>
           </article>
           <article class="node" data-start="2026-11-20T16:00:00+08:00" data-end="2026-11-20T17:15:00+08:00">
             <div class="node-top"><span class="node-time">16:00 出發・16:45 搭乘</span><span class="node-count">—</span></div>
@@ -1171,7 +1179,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區 16:00 約 16–17°C、17:00 約 16°C、降雨 20%（氣象署逐時），日落 17:04；美麗華百樂園 11:00–22:00、摩天輪營業中，16:45 搭乘不受影響。</p>
             <p class="howto"><b>怎麼去：</b>出飯店步行約 5 分到美麗華百樂園 5F 摩天輪廣場。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 美麗華百樂園</a>
           </article>
           <article class="node" data-start="2026-11-20T17:15:00+08:00" data-end="2026-11-20T18:45:00+08:00">
             <div class="node-top"><span class="node-time">17:15–18:45</span><span class="node-count">—</span></div>
@@ -1180,7 +1188,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區 17:00–18:00 約 15–16°C、降雨 20%（氣象署逐時；入夜 weather.com 降雨 10%）；NOKE、美麗華週五均營業至 22:00。</p>
             <p class="howto"><b>怎麼去：</b>步行約 5–8 分到 NOKE 忠泰樂生活，上 7F 上逸會。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → NOKE 忠泰樂生活</a>
           </article>
           <article class="node" data-start="2026-11-20T18:45:00+08:00" data-end="2026-11-20T21:00:00+08:00">
             <div class="node-top"><span class="node-time">18:45 出發・19:00 入席</span><span class="node-count">—</span></div>
@@ -1190,7 +1198,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區入夜約 15°C、降雨 20%（氣象署逐時）；NOKE 週五營業至 22:00，19:00 晚餐預訂已確認。</p>
             <p class="howto"><b>怎麼去：</b>步行約 5–8 分到 NOKE 忠泰樂生活，上 7F 上逸會。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E7%BE%8E%E9%BA%97%E8%8F%AF%E7%99%BE%E6%A8%82%E5%9C%92&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=NOKE%E5%BF%A0%E6%B3%B0%E6%A8%82%E7%94%9F%E6%B4%BB&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → NOKE 忠泰樂生活</a>
           </article>
           <article class="node" data-start="2026-11-20T21:00:00+08:00" data-end="2026-11-20T23:00:00+08:00">
             <div class="node-top"><span class="node-time">21:10 出發・23:00 熄燈</span><span class="node-count">—</span></div>
@@ -1200,7 +1208,10 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>板橋區夜間多雲、低溫 13°C，weather.com 降雨 0–10%；氣象署新北 11/20 晚晴時多雲 13–15°C。耶誕城亮燈 17:30–23:00、主燈秀每整點半點、22:00 最後一場有聲版維持；北捷正常營運（11/19 狀態）。</p>
             <p class="howto"><b>怎麼去：</b>劍南路站搭文湖線（往動物園方向）→ 忠孝復興站下車換板南線（往頂埔方向）→ 板橋站下車，2 號或 3A 出口，步行約 5 分到市民廣場；捷運車程 33 分（官方）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%8A%8D%E5%8D%97%E8%B7%AF%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%8A%8D%E5%8D%97%E8%B7%AF%E7%AB%99&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 劍南路站（先進站）</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 板橋站</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%8C%97%E6%AD%A1%E6%A8%82%E8%80%B6%E8%AA%95%E5%9F%8E&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 耶誕城・市民廣場</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%A4%A7%E6%B9%96%E5%85%AC%E5%9C%92%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 大湖公園站（輕量線）</a>
           </article>
           <article class="node" data-start="2026-11-20T23:00:00+08:00" data-end="2026-11-21T00:10:00+08:00">
             <div class="node-top"><span class="node-time">約 23:45–00:10 回到</span><span class="node-count">—</span></div>
@@ -1209,7 +1220,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>回程時段台北入夜約 15°C、降雨 20%（氣象署逐時）；北捷正常營運（11/19 狀態）。</p>
             <p class="howto"><b>怎麼去：</b>板橋站搭板南線（往南港展覽館方向）→ 忠孝復興站換文湖線（往南港展覽館方向）→ 劍南路站下車，步行約 10 分回台北萬豪酒店。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E6%9D%BF%E6%A9%8B%E7%AB%99&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">導航回台北萬豪 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 台北萬豪酒店</a>
           </article>
         </div>
 
@@ -1223,7 +1234,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中山區氣象署逐時 09:00 約 17°C、降雨 0%、晴時多雲；清晨低溫約 13–14°C，出門注意保暖。</p>
             <p class="howto"><b>怎麼去：</b>估約 20 分，導航終點「松山車站地下停車場」，入口認松山路 11 號（不要去台鐵松山車站東西區停車場，是不同一座）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">導航到松山車站停車場 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 松山車站地下停車場</a>
           </article>
           <article class="node" data-start="2026-11-21T10:00:00+08:00" data-end="2026-11-21T10:45:00+08:00">
             <div class="node-top"><span class="node-time">10:00–10:45</span><span class="node-count">—</span></div>
@@ -1233,7 +1244,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>松山區氣象署逐時 10:00 前後約 17–19°C、降雨 0%；松山車站地下停車場週五至週日及假日 NT$50／時、當日當次上限 NT$300、24 小時，無費率異動；萬豪往松山路況無封閉。</p>
             <p class="howto"><b>怎麼去：</b>估約 20 分，導航終點「松山車站地下停車場」，入口認松山路 11 號（不要去台鐵松山車站東西區停車場，是不同一座）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%9C%B0%E4%B8%8B%E5%81%9C%E8%BB%8A%E5%A0%B4&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 松山車站地下停車場</a>
           </article>
           <article class="node" data-start="2026-11-21T10:45:00+08:00" data-end="2026-11-21T12:15:00+08:00">
             <div class="node-top"><span class="node-time">10:45–12:15</span><span class="node-count">—</span></div>
@@ -1243,7 +1254,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>信義區氣象署逐時 11:00 約 17°C、降雨 0%、晴時多雲；松菸當日活動維持：自然葡萄酒展 Buvons Nature 11:00–17:00（一號倉庫）、新藝術博覽會、CC 同人祭。</p>
             <p class="howto"><b>怎麼去：</b>松山站出站步行約 10 分到松山文創園區。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%BE%E5%B1%B1%E6%96%87%E5%89%B5%E5%9C%92%E5%8D%80&amp;travelmode=walking" target="_blank" rel="noopener">現在位置 → 松山文創園區</a>
           </article>
           <article class="node" data-start="2026-11-21T12:15:00+08:00" data-end="2026-11-21T14:00:00+08:00">
             <div class="node-top"><span class="node-time">12:15 移動・12:30–14:00</span><span class="node-count">—</span></div>
@@ -1253,7 +1264,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>中正區氣象署逐時 12:00 約 20°C、降雨 0%、晴時多雲；華山當日活動維持（Hello Kitty 快閃、國泰人壽陪伴展等），巷貓 Alleycat's Pizza 營業中、週六時段涵蓋 12:30，現場候位策略不變。</p>
             <p class="howto"><b>怎麼去：</b>國父紀念館站搭板南線（往頂埔方向）2 站 → 忠孝新生站下車，步行約 5 分到華山1914；車程約 6 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%9C%8B%E7%88%B6%E7%B4%80%E5%BF%B5%E9%A4%A8%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 忠孝新生站（往華山）</a>
           </article>
           <article class="node" data-start="2026-11-21T14:15:00+08:00" data-end="2026-11-21T16:15:00+08:00">
             <div class="node-top"><span class="node-time">14:15 移動・14:30–16:15</span><span class="node-count">—</span></div>
@@ -1263,7 +1274,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>大同區氣象署逐時 14:00–15:00 約 19–20°C、降雨 0%、晴時多雲，戶外無雨提示。</p>
             <p class="howto"><b>怎麼去：</b>忠孝新生站搭板南線（往南港展覽館方向）1 站 → 台北車站換淡水信義線（往淡水方向）1 站 → 中山站下車，出站即心中山、赤峰街在步行範圍；全程約 12 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%BF%A0%E5%AD%9D%E6%96%B0%E7%94%9F%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 中山站（往赤峰街）</a>
           </article>
           <article class="node" data-start="2026-11-21T16:20:00+08:00" data-end="2026-11-21T17:45:00+08:00">
             <div class="node-top"><span class="node-time">16:20 移動・16:40 就位</span><span class="node-count">—</span></div>
@@ -1273,7 +1284,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>大同區 16:00–17:00 約 17–19°C、降雨 0%（氣象署逐時），日落 17:04；大稻埕貨櫃市集週六 12:00–22:00。</p>
             <p class="howto"><b>怎麼去：</b>中山站搭松山新店線（往松山方向）1 站 → 北門站下車，步行約 8 分到大稻埕碼頭；車程約 3 分。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E4%B8%AD%E5%B1%B1%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 北門站（往大稻埕）</a>
           </article>
           <article class="node" data-start="2026-11-21T17:45:00+08:00" data-end="2026-11-21T19:45:00+08:00">
             <div class="node-top"><span class="node-time">17:45 移動・18:10–19:45</span><span class="node-count">—</span></div>
@@ -1282,7 +1293,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>松山區 18:00 約 17°C、降雨 0%（氣象署逐時）；饒河夜市 17:00–24:00（00:00）維持。</p>
             <p class="howto"><b>怎麼去：</b>北門站搭松山新店線（往松山方向）直達松山站（約 14 分），5 號出口出站約 1 分到饒河夜市東端入口（慈祐宮旁）。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%8C%97%E9%96%80%E7%AB%99&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%8D%B7%E9%81%8B%E6%9D%BE%E5%B1%B1%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noopener">現在位置 → 松山站（往饒河夜市）</a>
           </article>
           <article class="node" data-start="2026-11-21T20:00:00+08:00" data-end="2026-11-21T23:30:00+08:00">
             <div class="node-top"><span class="node-time">20:00–20:30 取車</span><span class="node-count">—</span></div>
@@ -1292,7 +1303,7 @@
             <p class="wxline"><b>逐時查證（22:09）：</b>台北入夜約 15–17°C、降雨 0%（氣象署逐時）；市府路（松高–松壽）11/21 00:00–11/22 03:00 雙向封閉、新仁愛路例假日管制維持，本行程本就避開信義市府區；1968 環東→國3 與備選國1 內湖無封閉公告，出發前再看即時路況。</p>
             <p class="howto"><b>怎麼去：</b>松山出發 → 市民大道高架 → 環東大道 → 國3 南港交流道南下（備選：堤頂大道 → 國1 內湖交流道），20:00–20:30 出發估 22:30–23:30 抵達北屯。</p>
             <span class="node-now-badge"><span class="dot"></span>現在在這裡</span>
-            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">導航到這裡 →</a>
+            <br /><a class="node-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80&amp;travelmode=driving" target="_blank" rel="noopener">現在位置 → 台中市北屯區</a>
           </article>
         </div>
         <p class="nodes-note">節點時間與提醒內容與「行程總覽」分頁同一份定案行程（2026-11-19 更新）；車程與捷運時間為預估值，實際依當日路況與班距為準。</p>
